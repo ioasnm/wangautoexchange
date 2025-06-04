@@ -1,105 +1,159 @@
-form {
-  margin: 15px 0;
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didot&display=swap');
+
+body {
+  margin: 0;
+  background-color: #fdf5e6; /* cream */
+  color: #000;
+  font-family: 'Didot', serif;
 }
 
-form input, form textarea {
-  display: block;
-  margin: 5px 0 15px 0;
-  padding: 8px;
-  width: 100%;
-  max-width: 400px;
+/* Navbar */
+.navbar {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
 }
-
-form label {
+.logo img {
+  height: 40px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
   font-weight: bold;
 }
+.nav-links li a:hover {
+  text-decoration: underline;
+}
 
-button {
+/* Hero Banner */
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-shadow: 1px 1px 4px black;
+}
+.hero-text h1 {
+  font-family: 'Futura', sans-serif;
+  font-size: 3em;
+  margin: 0;
+}
+.hero-text p {
+  font-size: 1.2em;
+}
+
+/* Search Form */
+.search-form {
+  background-color: #fff;
+  padding: 30px 10px;
+  text-align: center;
+}
+.search-form h2 {
+  font-family: 'Futura', sans-serif;
+  color: #8B0000;
+}
+.search-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+.search-form input {
+  padding: 10px;
+  width: 180px;
+}
+.search-form button {
+  background-color: #8B0000;
+  color: white;
+  border: none;
   padding: 10px 20px;
+  font-weight: bold;
   cursor: pointer;
 }
-.hero {
-  background-color: #1a1a1a;
-  color: white;
+.search-form button:hover {
+  background-color: #a80000;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #f3f3f3;
   padding: 40px 20px;
   text-align: center;
 }
-.hero span {
-  color: #FFD700;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px black;
+.feature-box {
+  width: 280px;
+  margin: 20px 10px;
 }
-form input, button {
-  padding: 10px;
-  margin: 10px 0;
-  width: 90%;
-  max-width: 400px;
-  display: block;
+.feature-box img {
+  width: 60px;
+  height: 60px;
 }
-button {
-  background-color: #0074D9;
-  color: white;
-  border: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+.feature-box h3 {
+  font-family: 'Futura', sans-serif;
+  color: #8B0000;
 }
-button:hover {
-  background-color: #005bb5;
-  cursor: pointer;
-}
-.search-section, .listing-section, .gallery, .upload-section {
-  padding: 20px;
-  text-align: center;
-}
-.gallery-grid {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.gallery-grid img {
-  width: 250px;
-  height: auto;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-}
-section {
-  margin-bottom: 40px;
+.feature-box p {
+  font-size: 0.95em;
 }
 
-ul {
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  font-size: 0.9em;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px 10px;
+}
+.footer-section {
+  max-width: 200px;
+}
+.footer-section h4 {
+  font-family: 'Futura', sans-serif;
+  color: #FFD700;
+}
+.footer-section ul {
   list-style: none;
   padding: 0;
 }
-ul li {
-  margin: 10px 0;
-  font-size: 1.1em;
-  color: #333;
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
 }
-
-.trust-section {
-  background-color: #f9f9f9;
-  padding: 30px;
+.footer-section ul li a:hover {
+  text-decoration: underline;
 }
-
-.testimonials {
-  background-color: #f4f4f4;
-  padding: 30px;
+.footer-bottom {
+  background-color: #111;
+  text-align: center;
+  padding: 15px 0;
 }
-.testimonial-box {
-  background-color: white;
-  border-left: 5px solid #0074D9;
-  margin: 15px auto;
-  padding: 15px;
-  max-width: 600px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-textarea {
-  width: 90%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 10px 0;
-  resize: vertical;
+.footer-bottom p {
+  margin: 0;
 }

@@ -1,121 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wang Auto Exchange</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    header, footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-    }
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="indexstyles.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Wang Auto Exchange</h1>
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="your-logo.png" alt="Wang Auto Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Inventory</a></li>
+        <li><a href="#">Sell/Trade</a></li>
+        <li><a href="#">Finance</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-
-  <!-- Hero Section -->
+  <!-- Hero Banner -->
   <section class="hero">
-    <h2>🚗 Welcome to <span>Wang Auto Exchange</span> 🚗</h2>
-    <p>Buy. Sell. Trade — All in one trusted place.</p>
+    <img src="hero-placeholder.jpg" alt="Hero Image" />
+    <div class="hero-text">
+      <h1>Drive Your Future</h1>
+      <p>Buy. Sell. Trade. All in one place.</p>
+    </div>
   </section>
 
-  <!-- Vehicle Search -->
-  <section class="search-section">
-    <h3>🔍 Find Your Next Ride</h3>
-    <p>Use the form below to explore available vehicles from trusted sellers.</p>
+  <!-- Search Bar -->
+  <section class="search-form">
+    <h2>Search Our Inventory</h2>
     <form>
-      <input type="text" placeholder="Make (e.g. Toyota)" required>
-      <input type="text" placeholder="Model (e.g. Camry)" required>
-      <input type="number" placeholder="Year (e.g. 2019)" min="1990" max="2025">
-      <input type="number" placeholder="Max Price ($)">
-      <button type="submit">🚘 Search</button>
+      <input type="text" placeholder="Make" />
+      <input type="text" placeholder="Model" />
+      <input type="number" placeholder="Year" />
+      <input type="number" placeholder="Max Price ($)" />
+      <button type="submit">Search</button>
     </form>
   </section>
 
-  <!-- Submit Listing Form -->
-  <section class="listing-section">
-    <h3>📣 Want to Sell Your Car?</h3>
-    <p>Enter your vehicle's information below. We'll contact you within 24 hours.</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="text" placeholder="Vehicle Make & Model" required>
-      <input type="number" placeholder="Year" min="1990" max="2025">
-      <textarea placeholder="Brief Description of Condition" rows="4"></textarea>
-      <button type="submit">+ Submit Listing</button>
-    </form>
-  </section>
-
-  <!-- Trust/Stats Section -->
-  <section class="trust-section">
-    <h3>Why Choose Wang Auto Exchange?</h3>
-    <ul>
-      <li>✅ 1,500+ Successful Trades</li>
-      <li>✅ 100% Verified Listings</li>
-      <li>✅ Trade-in Options Accepted</li>
-      <li>✅ Local Pickup and Delivery Available</li>
-    </ul>
-  </section>
-
-  <!-- Featured Gallery -->
-  <section class="gallery">
-    <h3>🏞 Featured Vehicles</h3>
-    <div class="gallery-grid">
-      <img src="car1.jpg" alt="Car 1">
-      <img src="car2.jpg" alt="Car 2">
-      <img src="car3.jpg" alt="Car 3">
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="icon1.png" alt="Feature Icon" />
+      <h3>Easy Financing</h3>
+      <p>Options tailored to your budget and credit.</p>
+    </div>
+    <div class="feature-box">
+      <img src="icon2.png" alt="Feature Icon" />
+      <h3>Trusted Vehicles</h3>
+      <p>Every vehicle inspected for peace of mind.</p>
+    </div>
+    <div class="feature-box">
+      <img src="icon3.png" alt="Feature Icon" />
+      <h3>Instant Offers</h3>
+      <p>Get competitive quotes for your trade-in.</p>
     </div>
   </section>
 
-  <!-- Customer Testimonials -->
-  <section class="testimonials">
-    <h3>💬 What Our Customers Say</h3>
-    <div class="testimonial-box">
-      <p>“Super easy experience! Traded in my car and got a great deal.” – <strong>Alex R.</strong></p>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Email: info@wangauto.com</p>
+        <p>Phone: (123) 456-7890</p>
+      </div>
+      <div class="footer-section">
+        <h4>Location</h4>
+        <p>123 Crimson Ave<br/>Auto City, USA</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Inventory</a></li>
+          <li><a href="#">Finance</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="testimonial-box">
-      <p>“Great service, fast replies. Highly recommend Wang Auto Exchange!” – <strong>Jasmine P.</strong></p>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Wang Auto Exchange. All rights reserved.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- Background Upload -->
-  <section class="upload-section">
-    <h3>🖼 Upload Background Image</h3>
-    <p>Select a custom background image for your experience.</p>
-    <input type="file" id="bg-upload" accept="image/*">
-  </section>
-<script>
-  const bgUpload = document.getElementById('bg-upload');
-  bgUpload.addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        document.body.style.backgroundImage = `url('${e.target.result}')`;
-        document.body.style.backgroundSize = 'cover';
-        document.body.style.backgroundPosition = 'center';
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-</script>
 </body>
-</main>
-
-
 </html>

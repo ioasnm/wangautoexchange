@@ -27,12 +27,45 @@
   </header>
 
   <main>
-    <p>Welcome to Wang Auto Exchange. Your trusted car trading platform.</p>
-  </main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>🚗 Welcome to <span>Wang Auto Exchange</span> 🚗</h2>
+    <p>Buy. Sell. Trade — All in one trusted place.</p>
+  </section>
 
-  <footer>
-    <h1>Wang Auto Exchange</h1>
-  </footer>
+  <!-- Vehicle Search -->
+  <section class="search-section">
+    <h3>🔍 Find Your Next Ride</h3>
+    <form>
+      <input type="text" placeholder="Make (e.g. Toyota)" required>
+      <input type="text" placeholder="Model (e.g. Camry)" required>
+      <input type="number" placeholder="Year (e.g. 2019)" min="1990" max="2025">
+      <input type="number" placeholder="Max Price ($)">
+      <button type="submit">🚘 Search</button>
+    </form>
+  </section>
 
-</body>
+  <!-- Submit Listing -->
+  <section class="listing-section">
+    <h3>📣 Want to Sell Your Car?</h3>
+    <button onclick="alert('Feature coming soon!')">+ Submit Your Listing</button>
+  </section>
+
+  <!-- Car Gallery -->
+  <section class="gallery">
+    <h3>🏞 Featured Vehicles</h3>
+    <div class="gallery-grid">
+      <img src="car1.jpg" alt="Car 1">
+      <img src="car2.jpg" alt="Car 2">
+      <img src="car3.jpg" alt="Car 3">
+    </div>
+  </section>
+
+  <!-- Background Upload -->
+  <section class="upload-section">
+    <h3>🖼 Upload Background Image</h3>
+    <input type="file" id="bg-upload" accept="image/*">
+  </section>
+</main>
+
 </html>

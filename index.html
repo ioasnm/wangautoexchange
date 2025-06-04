@@ -27,6 +27,7 @@
   </header>
 
   <main>
+
   <!-- Hero Section -->
   <section class="hero">
     <h2>🚗 Welcome to <span>Wang Auto Exchange</span> 🚗</h2>
@@ -36,6 +37,7 @@
   <!-- Vehicle Search -->
   <section class="search-section">
     <h3>🔍 Find Your Next Ride</h3>
+    <p>Use the form below to explore available vehicles from trusted sellers.</p>
     <form>
       <input type="text" placeholder="Make (e.g. Toyota)" required>
       <input type="text" placeholder="Model (e.g. Camry)" required>
@@ -45,13 +47,32 @@
     </form>
   </section>
 
-  <!-- Submit Listing -->
+  <!-- Submit Listing Form -->
   <section class="listing-section">
     <h3>📣 Want to Sell Your Car?</h3>
-    <button onclick="alert('Feature coming soon!')">+ Submit Your Listing</button>
+    <p>Enter your vehicle's information below. We'll contact you within 24 hours.</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Vehicle Make & Model" required>
+      <input type="number" placeholder="Year" min="1990" max="2025">
+      <textarea placeholder="Brief Description of Condition" rows="4"></textarea>
+      <button type="submit">+ Submit Listing</button>
+    </form>
   </section>
 
-  <!-- Car Gallery -->
+  <!-- Trust/Stats Section -->
+  <section class="trust-section">
+    <h3>Why Choose Wang Auto Exchange?</h3>
+    <ul>
+      <li>✅ 1,500+ Successful Trades</li>
+      <li>✅ 100% Verified Listings</li>
+      <li>✅ Trade-in Options Accepted</li>
+      <li>✅ Local Pickup and Delivery Available</li>
+    </ul>
+  </section>
+
+  <!-- Featured Gallery -->
   <section class="gallery">
     <h3>🏞 Featured Vehicles</h3>
     <div class="gallery-grid">
@@ -61,11 +82,40 @@
     </div>
   </section>
 
+  <!-- Customer Testimonials -->
+  <section class="testimonials">
+    <h3>💬 What Our Customers Say</h3>
+    <div class="testimonial-box">
+      <p>“Super easy experience! Traded in my car and got a great deal.” – <strong>Alex R.</strong></p>
+    </div>
+    <div class="testimonial-box">
+      <p>“Great service, fast replies. Highly recommend Wang Auto Exchange!” – <strong>Jasmine P.</strong></p>
+    </div>
+  </section>
+
   <!-- Background Upload -->
   <section class="upload-section">
     <h3>🖼 Upload Background Image</h3>
+    <p>Select a custom background image for your experience.</p>
     <input type="file" id="bg-upload" accept="image/*">
   </section>
+<script>
+  const bgUpload = document.getElementById('bg-upload');
+  bgUpload.addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document.body.style.backgroundImage = `url('${e.target.result}')`;
+        document.body.style.backgroundSize = 'cover';
+        document.body.style.backgroundPosition = 'center';
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
+</body>
 </main>
+
 
 </html>
